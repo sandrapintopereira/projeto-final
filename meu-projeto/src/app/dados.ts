@@ -1,7 +1,7 @@
-import { ConteudoMedia } from './interface';
+import { Conteudo } from './interface';
 //ficheiro com dados iniciais 
 //filmes e séries para adicionar e testar 
-export const DADOS_INICIAIS: ConteudoMedia[] = [
+export const DADOS_INICIAIS: Conteudo[] = [
     {id: new Date(), 
         titulo: 'Conclave',
         tipo: 'filme', 

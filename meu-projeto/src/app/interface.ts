@@ -1,7 +1,7 @@
 //interface para filmes/series
 //readonly no id para tornar a propriedade imutável
 //criar verificações para cada union type
-export interface ConteudoMedia {
+export interface Conteudo {
     readonly id: Date;
     titulo: string;
     tipo: 'filme' | 'serie';
