@@ -1,4 +1,4 @@
-import { Conteudo } from './interface';
+import { Conteudo } from '../interfaces/conteudo';
 //ficheiro com dados iniciais 
 //filmes e séries para adicionar e testar 
 export const DADOS_INICIAIS: Conteudo[] = [
