@@ -2,7 +2,7 @@
 //readonly no id para tornar a propriedade imutável
 //criar verificações para cada union type
 export interface ConteudoMedia {
-    readonly id: number;
+    readonly id: Date;
     titulo: string;
     tipo: 'filme' | 'serie';
     estado: 'visto' | 'porVer';
