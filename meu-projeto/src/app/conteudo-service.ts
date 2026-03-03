@@ -43,7 +43,7 @@ export class ConteudoMediaService {
   //função add
   adicionar(dados: FormConteudo): Conteudo {
      const novoConteudo: Conteudo = {
-      id: new Date(),
+      id: new Date(),//sdfghj
       titulo: dados.titulo,
       tipo: dados.tipo,
       estado: dados.estado,
