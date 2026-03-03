@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ConteudoMedia } from './conteudo-media';
+import { ConteudoMedia } from './conteudo-service';
 
 describe('ConteudoMedia', () => {
   let service: ConteudoMedia;
