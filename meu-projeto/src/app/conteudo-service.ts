@@ -36,14 +36,14 @@ export class ConteudoMediaService {
    }
     
   //função getById
-  buscarPeloId(id: Date): Conteudo | undefined {
+  buscarPeloId(id: number): Conteudo | undefined {
       return this.conteudos.find(conteudo => conteudo.id === id);
   }
 
   //função add
   adicionar(dados: FormConteudo): Conteudo {
      const novoConteudo: Conteudo = {
-      id: new Date(),//sdfghj
+      id: Date.now(),
       titulo: dados.titulo,
       tipo: dados.tipo,
       estado: dados.estado,
@@ -66,7 +66,7 @@ export class ConteudoMediaService {
     const conteudosAtualizados: Conteudo[] = [];
 
     for(const conteudoAtual of this.conteudos) {
-      if(conteudoAtual.id.getTime() === conteudoAtualizado.id.getTime()) {
+      if(conteudoAtual.id === conteudoAtualizado.id) {
         //se o id bater certo, substitui pelo conteúdo atualizado
         conteudosAtualizados.push(conteudoAtualizado);
       } else {
@@ -81,8 +81,8 @@ export class ConteudoMediaService {
   }
 
   //função delete(id)
-  remover(id: Date): void {
-     this.conteudos = this.conteudos.filter(c => c.id.getTime() !== id.getTime()); //getTime para retornar number
+  remover(id: number): void {
+     this.conteudos = this.conteudos.filter(c => c.id!== id); 
   
      this.salvarStorage(this.conteudos);
      
