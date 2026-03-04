@@ -6,17 +6,16 @@
 h1 {
   display: inline-block;
   margin: 0;
-  color: #e990d3;
+  color: #ddbdbe;
   font-size: 2em;
   font-weight: 300;
   vertical-align: middle;
 }
 
-/* Container pai (header) */
 :host {
   display: flex;
   align-items: center;
   padding: 15px 30px;
-  background-color: rgb(71, 16, 66);
+  background-color: rgb(71, 16, 30);
   color: white;
 }

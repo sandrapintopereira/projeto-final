@@ -1,0 +1,21 @@
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.card {
+    border: 1px solid #31052e;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: rgb(rgb(226, 225, 171));
+    gap: 12px;
+}
+
+.titulo-card {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
