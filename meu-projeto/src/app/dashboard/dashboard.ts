@@ -44,7 +44,7 @@ export class Dashboard {
       return contador;
       }
     
-    get melhorFilme(): Conteudo | null{
+    get melhorFilme(): Conteudo | null {
       const filmes = [];
 
       for(let conteudo of this.conteudos) {
@@ -60,6 +60,28 @@ export class Dashboard {
       for(let filme of filmes) {
         if(filme.avaliacao > melhor.avaliacao) {
           melhor = filme;
+        }
+      }
+
+      return melhor;
+  
+}
+    get melhorSerie(): Conteudo | null {
+      const series = [];
+
+      for(let conteudo of this.conteudos) {
+        if(conteudo.tipo === 'serie') {
+          series.push(conteudo);
+        } else if(series.length === 0) {
+          return null
+        }
+      }
+
+      let melhor = series[0];
+
+      for(let serie of series) {
+        if(serie.avaliacao > melhor.avaliacao) {
+          melhor = serie;
         }
       }
 
