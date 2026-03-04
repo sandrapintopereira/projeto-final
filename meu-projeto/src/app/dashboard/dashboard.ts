@@ -64,8 +64,8 @@ export class Dashboard {
       }
 
       return melhor;
-  
-}
+    }
+
     get melhorSerie(): Conteudo | null {
       const series = [];
 
@@ -87,5 +87,17 @@ export class Dashboard {
 
       return melhor;
   
+    }
+
+    get ultimoAdicionado(): Conteudo | null {
+      const todos = this.service.listar();
+
+      if(todos.length === 0) {
+        return null;
+      } else {
+        return todos[todos.length - 1];
+      }
+    }
+
 }
-}
+

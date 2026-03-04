@@ -1,5 +1,15 @@
 <app-header></app-header>
-
+<section class="destaque">
+    <h3>Último adicionado</h3>
+    @if(ultimoAdicionado) {
+        <div>{{ultimoAdicionado.titulo}}</div>
+        <div>{{ultimoAdicionado.tipo}}</div>
+        <div>{{ultimoAdicionado.anoLancamento}}</div>
+        <div>{{ultimoAdicionado.criador}}</div>
+    } else {
+        <div>Sem Conteúdo</div>
+    }
+</section>
 <section class="cards">
     <div class="cards-container">
         <div class="card">
