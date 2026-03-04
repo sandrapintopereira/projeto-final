@@ -13,7 +13,11 @@ export class ConteudoMediaService {
   private conteudos: Conteudo[] = [];
 
   constructor() {
-    this.conteudos = this.carregarStorage() || []; //para carregar array no início
+    if(typeof window !== 'undefined') {
+      this.conteudos = this.carregarStorage() || [];
+    } else {
+      this.conteudos = [];
+    }
   }
   salvarStorage(conteudos: Conteudo[]) {
      return localStorage.setItem(CHAVE_FIXA, JSON.stringify(conteudos));

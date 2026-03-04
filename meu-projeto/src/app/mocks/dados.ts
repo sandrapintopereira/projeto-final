@@ -2,7 +2,7 @@ import { Conteudo } from '../interfaces/conteudo';
 //ficheiro com dados iniciais 
 //filmes e séries para adicionar e testar 
 export const DADOS_INICIAIS: Conteudo[] = [
-    {id: new Date(), 
+    {id: Date.now(), 
         titulo: 'Conclave',
         tipo: 'filme', 
         estado: 'visto',
@@ -12,7 +12,7 @@ export const DADOS_INICIAIS: Conteudo[] = [
         anoLancamento: 2024, 
         criadoEm: new Date(),
     },
-    {id: new Date(),
+    {id: Date.now(),
         titulo: 'Challengers',
         tipo: 'filme',
         estado: 'visto',
@@ -22,7 +22,7 @@ export const DADOS_INICIAIS: Conteudo[] = [
         anoLancamento: 2024,
         criadoEm: new Date(),
     },
-    {id: new Date(),
+    {id: Date.now(),
         titulo: 'From',
         tipo: 'serie',
         estado: 'visto',
@@ -32,7 +32,7 @@ export const DADOS_INICIAIS: Conteudo[] = [
         anoLancamento: 2022,
         criadoEm: new Date(),
     },
-    {id: new Date(),
+    {id: Date.now(),
         titulo: 'Pluribus',
         tipo: 'serie',
         estado: 'visto',
