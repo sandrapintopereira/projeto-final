@@ -1,12 +1,12 @@
 .logo {
   margin-right: 15px;
-  border-radius: 50%;
+  border-radius: 2%;
 }
 
 h1 {
   display: inline-block;
   margin: 0;
-  color: #ddbdbe;
+  color: #5e090c;
   font-size: 2em;
   font-weight: 300;
   vertical-align: middle;
@@ -16,6 +16,6 @@ h1 {
   display: flex;
   align-items: center;
   padding: 15px 30px;
-  background-color: rgb(71, 16, 30);
   color: white;
+  border-radius: 2%;
 }

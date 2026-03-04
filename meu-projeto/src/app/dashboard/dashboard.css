@@ -1,7 +1,7 @@
 .cards-container {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     padding: 20px 0;
 }
@@ -10,8 +10,10 @@
     border: 1px solid #31052e;
     border-radius: 12px;
     padding: 24px;
-    background-color: rgb(rgb(226, 225, 171));
     gap: 12px;
+    background-color:rgb(250, 246, 225);
+    max-width: 160px;
+    min-height: 100px;
 }
 
 .card-filmes, 
@@ -29,4 +31,13 @@
     color: #64748b;
     font-size: 16px;
     margin-bottom: 10px;
+}
+.destaque {
+    border: 1px solid #31052e;
+    border-radius: 12px;
+    padding: 35px;
+    gap: 12px;
+    background-color:rgb(250, 246, 225);
+    max-width: 1000px;
+    min-height: 100px;
 }
