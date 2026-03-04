@@ -1,15 +1,16 @@
 <section class="lista">
     <h2>Lista de Conteúdos</h2>
 
-    <input [(ngModel)]="textoPesquisa" placeholder="Pesquisar...">
+    <input class="pesquisa"[(ngModel)]="textoPesquisa" placeholder="Pesquisar...">
     <button class="btn-novo" routerLink="/media/new">Adicionar Novo Conteúdo</button>
 
-    <ul class="lista">
+    <ul>
         @for (conteudo of conteudos; track conteudo) {
-            <li class="item">{{ conteudo.titulo }}</li>
-            <li class="item"> {{ conteudo.tipo }}</li>
-            <li class="item"> {{ conteudo.estado }}</li>
-            <li class="item"> {{ conteudo.avaliacao }}</li>
+            <li class="item" [ngClass]="conteudo.estado">
+                <strong>{{ conteudo.titulo }}</strong>
+                <span>{{conteudo.tipo}} || {{conteudo.anoLancamento}} || {{conteudo.avaliacao}}</span>
+            </li>
+           
         }
     </ul>
 </section>
