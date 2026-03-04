@@ -50,9 +50,10 @@ export class Dashboard {
       for(let conteudo of this.conteudos) {
         if(conteudo.tipo === 'filme') {
           filmes.push(conteudo);
-        } else if(filmes.length === 0) {
-          return null
         }
+        }
+        if(filmes.length === 0) {
+          return null
       }
 
       let melhor = filmes[0];
@@ -72,11 +73,11 @@ export class Dashboard {
       for(let conteudo of this.conteudos) {
         if(conteudo.tipo === 'serie') {
           series.push(conteudo);
-        } else if(series.length === 0) {
-          return null
         }
       }
-
+      if(series.length === 0) {
+          return null;
+      }
       let melhor = series[0];
 
       for(let serie of series) {
