@@ -51,7 +51,7 @@ export class ConteudoMediaService {
       titulo: dados.titulo,
       tipo: dados.tipo,
       estado: dados.estado,
-      avaliacao: dados.avaliacao,
+      avaliacao: dados.avaliacao || 0,
       genero: dados.genero,
       criador: dados.criador,
       anoLancamento: dados.anoLancamento,

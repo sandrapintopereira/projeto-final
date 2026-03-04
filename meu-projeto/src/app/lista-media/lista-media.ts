@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ConteudoMediaService } from '../conteudo-service';
+import { CommonModule, NgClass } from '@angular/common';
 import { Conteudo } from '../interfaces/conteudo';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgClass } from "../../../node_modules/@angular/common/types/_common_module-chunk";
+
 
 @Component({
   selector: 'app-lista-media',
