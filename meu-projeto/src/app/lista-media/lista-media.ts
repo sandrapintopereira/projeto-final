@@ -16,7 +16,10 @@ import { Header } from "../header/header";
 
 //OnInit para carregar dados/incializar estado
 export class ListaMedia implements OnInit {
+  //variável para pesquisa
   textoPesquisa: string = '';
+  //variável para ordenação
+  criterioOrdenacao = 'titulo-az';
   conteudos: Conteudo[] = [];
 
   constructor(private service: ConteudoMediaService) {}
@@ -29,8 +32,17 @@ export class ListaMedia implements OnInit {
     const todos = this.service.listar();
     if (!this.textoPesquisa) {
       return todos;
-    } 
+    } else {
     return todos.filter(c => c.titulo.toLowerCase().includes(this.textoPesquisa.toLowerCase()));
+    }
+  }
+
+  get conteudosOrdenados(): Conteudo[] {
+    //cópia de array
+    const lista = [...this.conteudosFiltrados];
+    //para ordenar alfabeticamente 
+    lista.sort((a, b) => a.titulo.localeCompare(b.titulo));
+    return lista;
   }
 }
 
