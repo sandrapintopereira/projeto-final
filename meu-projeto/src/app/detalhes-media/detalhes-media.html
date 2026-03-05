@@ -1,1 +1,17 @@
-<p>detalhes-media works!</p>
+<app-header></app-header>
+<div class="detalhes-container">
+    <div class="detalhes-card">
+        @if (conteudo) {
+            <h1>{{conteudo.titulo}}</h1>
+            <p><strong>Tipo:</strong> {{conteudo.tipo}}</p>
+            <p><strong>Ano:</strong> {{conteudo.anoLancamento}}</p>
+            <p><strong>Estado:</strong> {{conteudo.estado}}</p>
+            <p><strong>Avaliação:</strong> {{conteudo.avaliacao}}/10</p>
+            <p><strong>Género:</strong> {{conteudo.genero}}</p>
+            <p><strong>Criador:</strong> {{conteudo.criador}}</p>
+            <p><strong>Ano de Lançamento:</strong> {{conteudo.anoLancamento}}</p>
+            <p><strong>Ano de Fim:</strong> {{conteudo.anoFim}}</p>
+        }
+        <a routerLink="/media" class="voltar">← Voltar</a>
+    </div>
+</div>

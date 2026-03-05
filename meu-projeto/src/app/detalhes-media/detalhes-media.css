@@ -1,0 +1,48 @@
+.detalhes-container {
+  padding: 20px; 
+  max-width: 60%; 
+  margin: 20px auto;
+  background: rgb(219, 199, 98);
+  border: 1px solid #310707; 
+  border-radius: 10px;
+}
+
+.detalhes-card {
+  border: 1px solid #310707; 
+  padding: 25px; 
+  margin: 14px 0; 
+  border-radius: 10px;
+  background: #fafafa;  
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.detalhes-card h1 {
+  font-size: 25px;
+  color: #3a0709;     
+  margin: 0 0 20px 0;
+}
+
+.detalhes-card p {
+  font-size: 15px;
+  color: #332f07;    
+  margin: 8px 0;
+}
+
+.detalhes-card strong {
+  color: #310707;
+  font-size: 18px;
+}
+
+.voltar {
+  background: #5e090c;
+  color: #ccc;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.voltar:hover {
+  background: #7c0f13;
+}
