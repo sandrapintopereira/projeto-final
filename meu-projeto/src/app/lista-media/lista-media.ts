@@ -41,7 +41,11 @@ export class ListaMedia implements OnInit {
     //cópia de array
     const lista = [...this.conteudosFiltrados];
     //para ordenar alfabeticamente 
-    lista.sort((a, b) => a.titulo.localeCompare(b.titulo));
+    if(this.criterioOrdenacao === 'titulo-az') {
+      lista.sort((a, b) => a.titulo.localeCompare(b.titulo));
+    } else if (this.criterioOrdenacao === 'titulo-za') {
+      lista.sort((a, b) => b.titulo.localeCompare(a.titulo));
+    }
     return lista;
   }
 }
