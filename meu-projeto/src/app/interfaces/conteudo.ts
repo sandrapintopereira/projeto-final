@@ -6,7 +6,7 @@ export interface Conteudo {
     titulo: string;
     tipo: 'filme' | 'serie';
     estado: 'visto' | 'porVer';
-    avaliacao?: number;
+    avaliacao: number;
     genero: string;
     criador: string;
     anoLancamento: number;
