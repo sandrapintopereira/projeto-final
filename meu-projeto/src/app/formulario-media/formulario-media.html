@@ -15,14 +15,10 @@
             <option value="visto">Visto</option>
             <option value="porVer">Por Ver</option>
     </select>
-    <input formControlName="estado" type="text" placeholder="Estado">
     @if (form.get('estado')?.invalid && form.get('estado')?.touched) {
         <p>O estado é obrigatório.</p>
     }
     <input formControlName="avaliacao" type="text" placeholder="Avaliação 0/10">
-    @if (form.get('avaliacao')?.invalid && form.get('avaliacao')?.touched) {
-        <p>A avalição é obrigatória. De 0 </p>
-    }
     <input formControlName="genero" type="text" placeholder="Género">
     @if (form.get('genero')?.invalid && form.get('genero')?.touched) {
         <p>O género é obrigatório.</p>
