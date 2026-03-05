@@ -1,13 +1,20 @@
-<app-header>></app-header>
+<app-header></app-header>
 <form [formGroup]="form">
     <input formControlName="titulo" type="text" placeholder="Título">
     @if (form.get('titulo')?.invalid && form.get('titulo')?.touched) {
         <p>O título é obrigatório e deve ter pelo menos 3 caracteres.</p>
     }
-    <input formControlName="tipo" type="text" placeholder="Tipo">
+    <select formControlName="tipo" class="seletor">
+            <option value="filme">Filme</option>
+            <option value="serie">Série</option>
+    </select>
     @if (form.get('tipo')?.invalid && form.get('tipo')?.touched) {
-        <p>O tipo é obrigatório, filme ou serie.</p>
+        <p>O tipo é obrigatório.</p>
     }
+    <select formControlName="estado" class="seletor">
+            <option value="visto">Visto</option>
+            <option value="porVer">Por Ver</option>
+    </select>
     <input formControlName="estado" type="text" placeholder="Estado">
     @if (form.get('estado')?.invalid && form.get('estado')?.touched) {
         <p>O estado é obrigatório.</p>
