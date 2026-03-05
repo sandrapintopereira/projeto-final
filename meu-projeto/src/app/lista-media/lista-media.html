@@ -4,15 +4,20 @@
     <h2>Lista de Conteúdos</h2>
     <button class="btn-novo" routerLink="/media/new">Adicionar Novo</button>
     </div>
-
+    <!--VOLTAR AQUI-->
     <div class="filtros">
         <input class="pesquisa"[(ngModel)]="textoPesquisa" placeholder="Pesquisar...">
+    @if(textoPesquisa) {
         <select class="ordenacao" [(ngModel)]="criterioOrdenacao">
             <option value="titulo-az">A -> Z</option>
             <option value="titulo-za">Z -> A</option>
         </select>
+        @for(conteudoFiltrado of conteudosFiltrados; track conteudoFiltrado) {
+            <li class="item">{{ conteudoFiltrado.titulo }}</li>
+        }
+    }
     </div>
-    
+
     <ul>
         @for (conteudo of conteudos; track conteudo) {
             <li class="item" [ngClass]="conteudo.estado">
