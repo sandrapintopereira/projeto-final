@@ -68,3 +68,13 @@ h2 {
 
 .visto { color: rgb(38, 90, 38); font-weight: bold; }
 .por-ver { color: rgb(129, 40, 40); font-weight: bold; }
+
+.botao-remover {
+    border: none;
+    background-color: #610a0a;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+}
