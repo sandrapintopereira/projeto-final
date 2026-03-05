@@ -41,9 +41,9 @@ export class ConteudoMediaService {
    }
     
   //função getById
-  buscarPeloId(id: number): Conteudo | undefined {
+  /*buscarPeloId(id: number): Conteudo | undefined {
       return this.conteudos.find(conteudo => conteudo.id === id);
-  }
+  }*/
 
   //função add
   adicionar(dados: FormConteudo): Conteudo {
