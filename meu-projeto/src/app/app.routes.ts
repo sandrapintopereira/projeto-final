@@ -8,5 +8,5 @@ export const routes: Routes = [
     {path: '', component: Dashboard},
     {path: 'media', component: ListaMedia},
     {path: 'media/new', component: FormularioMedia},
-    {path: 'media/:id', component: DetalhesMedia},
+    {path: 'detalhe/:id', component: DetalhesMedia},
 ];

@@ -1,9 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ConteudoMediaService } from '../conteudo-service';
+import { Conteudo } from '../interfaces/conteudo';
+import { Header } from '../header/header';
 
 @Component({
   selector: 'app-detalhes-media',
-  imports: [],
+  imports: [Header, RouterLink],
   templateUrl: './detalhes-media.html',
   styleUrl: './detalhes-media.css',
 })
-export class DetalhesMedia {}
+export class DetalhesMedia implements OnInit {
+  conteudo: Conteudo | undefined;
+
+  constructor(private route: ActivatedRoute, private service: ConteudoMediaService) {}
+
+  ngOnInit() {
+    const id = Number(this.route.snapshot.params['id']);
+    this.conteudo = this.service.buscarPeloId(id);
+  }
+}

@@ -53,6 +53,5 @@ export class ListaMedia implements OnInit {
     console.log("ID clicado:", id);
     this.service.remover(id);
     this.conteudos = this.service.listar();
-}
-
+  }
 }
