@@ -1,1 +1,27 @@
-<p>formulario-media works!</p>
+<form [formGroup]="form">
+    <input formControlName="titulo" type="text" placeholder="Título">
+    @if (form.get('titulo')?.invalid && form.get('titulo')?.touched) {
+        <p>O título é obrigatório e deve ter pelo menos 3 caracteres.</p>
+    }
+    <input formControlName="tipo" type="text" placeholder="Tipo">
+    @if (form.get('tipo')?.invalid && form.get('tipo')?.touched) {
+        <p>O tipo é obrigatório, filme ou serie.</p>
+    }
+    <input formControlName="estado" type="text" placeholder="Estado">
+    @if (form.get('estado')?.invalid && form.get('estado')?.touched) {
+        <p>O estado é obrigatório.</p>
+    }
+    <input formControlName="avaliacao" type="text" placeholder="Título">
+    @if (form.get('titulo')?.invalid && form.get('titulo')?.touched) {
+        <p>O título é obrigatório e deve ter pelo menos 3 caracteres.</p>
+    }
+    <input formControlName="tipo" type="text" placeholder="Tipo">
+    @if (form.get('tipo')?.invalid && form.get('tipo')?.touched) {
+        <p>O tipo é obrigatório, filme ou serie.</p>
+    }
+    <input formControlName="estado" type="text" placeholder="Estado">
+    @if (form.get('estado')?.invalid && form.get('estado')?.touched) {
+        <p>O estado é obrigatório.</p>
+    }
+    <button type="submit" (click)="onSubmit()" [disabled]="form.invalid">Entrar</button>
+</form>
