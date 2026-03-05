@@ -7,6 +7,6 @@ import { FormularioMedia } from './formulario-media/formulario-media';
 export const routes: Routes = [
     {path: '', component: Dashboard},
     {path: 'media', component: ListaMedia},
-    {path: 'media/:id', component: DetalhesMedia},
     {path: 'media/new', component: FormularioMedia},
+    {path: 'media/:id', component: DetalhesMedia},
 ];
