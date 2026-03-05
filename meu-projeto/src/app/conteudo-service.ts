@@ -90,7 +90,5 @@ export class ConteudoMediaService {
      this.conteudos = this.conteudos.filter(c => c.id!== id); 
   
      this.salvarStorage(this.conteudos);
-     
-  
   }
 }

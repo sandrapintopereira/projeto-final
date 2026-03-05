@@ -21,14 +21,15 @@
     </div>
 
     <ul>
-        @for (conteudo of conteudos; track conteudo) {
-            <li class="item" [ngClass]="conteudo.estado">
+        <!--@for (conteudo of conteudos; track conteudo) {-->
+        <!--PERGUNTAR AO PROFESSOR PORQUE NÃO FICA VERDE OU VERMELHO-->
+            <li class="item" *ngFor="let conteudo of conteudosOrdenados" [ngClass]="{'visto': conteudo.estado === 'visto', 'porVer': conteudo.estado === 'porVer'}">
                 <strong>{{ conteudo.titulo }}</strong>
-                <span>{{conteudo.tipo}} || {{conteudo.anoLancamento}} || {{conteudo.avaliacao}}</span>
-                <button class="botao-remover">X</button>
+                <span>Tipo: {{conteudo.tipo}} || Ano: {{conteudo.anoLancamento}} || Avaliação: {{conteudo.avaliacao}}/10</span>
+                <button class="botao-remover" (click)="remover(conteudo.id)">X</button>
             </li>
            
-        }
+        
     </ul>
 </section>
 <!--ver como meter o botão remover a funcionar, estilizar para ele ir para o lado direito -->

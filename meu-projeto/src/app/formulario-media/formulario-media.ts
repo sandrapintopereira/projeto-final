@@ -24,7 +24,7 @@ export class FormularioMedia {
     tipo: new FormControl('', [Validators.required]),
     estado: new FormControl('', [Validators.required]),
     //validação de 0 a 10 a avaliação
-    avaliacao: new FormControl(0, [Validators.required, Validators.min(0), Validators.max(10)]),
+    avaliacao: new FormControl(0, [Validators.min(0), Validators.max(10)]),
     //validação de 2 caracteres
     genero: new FormControl('', [Validators.required, Validators.minLength(2)]),
     //validação de 3 caracteres

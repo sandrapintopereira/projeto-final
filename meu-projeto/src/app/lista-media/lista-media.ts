@@ -9,7 +9,7 @@ import { Header } from "../header/header";
 
 @Component({
   selector: 'app-lista-media',
-  imports: [RouterLink, FormsModule, NgClass, Header],
+  imports: [RouterLink, FormsModule, NgClass, Header, CommonModule],
   templateUrl: './lista-media.html',
   styleUrl: './lista-media.css',
 })
@@ -48,6 +48,11 @@ export class ListaMedia implements OnInit {
     }
     return lista;
   }
+
+  remover(id: number) {
+    console.log("ID clicado:", id);
+    this.service.remover(id);
+    this.conteudos = this.service.listar();
 }
 
-
+}

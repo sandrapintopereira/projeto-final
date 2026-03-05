@@ -59,7 +59,7 @@ export class Dashboard {
       let melhor = filmes[0];
 
       for(let filme of filmes) {
-        if(filme.avaliacao > melhor.avaliacao) {
+        if(filme.avaliacao !== undefined && (!melhor.avaliacao || filme.avaliacao > melhor.avaliacao)) {
           melhor = filme;
         }
       }
@@ -81,7 +81,7 @@ export class Dashboard {
       let melhor = series[0];
 
       for(let serie of series) {
-        if(serie.avaliacao > melhor.avaliacao) {
+        if(serie.avaliacao !== undefined && (!melhor.avaliacao || serie.avaliacao > melhor.avaliacao)) {
           melhor = serie;
         }
       }
