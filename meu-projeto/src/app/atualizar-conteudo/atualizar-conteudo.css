@@ -1,0 +1,48 @@
+.atualizar-conteudo{
+  padding: 25px;
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgb(219, 199, 98);
+  border: 1px solid #310707;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.atualizar-conteudo h2{
+  margin-bottom: 10px;
+  color: #5e090c;
+  font-weight: 300;
+}
+
+.atualizar-conteudo input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.atualizar-conteudo select{
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.salvar{
+  margin-top: 10px;
+  background: #5e090c;
+  color: #ece6e6;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.salvar:hover{
+  background:#7c0f13;
+}

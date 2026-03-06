@@ -1,18 +1,21 @@
 <app-header></app-header>
+<section class="atualizar-conteudo">
+    <h2>Atualizar Conteúdo</h2>
 @if(conteudo) {
-    <input [(ngModel)]="conteudo.titulo">
-    <select [(ngModel)]="conteudo.tipo">
+    <input [(ngModel)]="conteudo.titulo" placeholder="Título">
+    <select [(ngModel)]="conteudo.tipo" placeholder="Tipo">
         <option value="filme">Filme</option>
         <option value="serie">Série</option>
     </select>
-     <select [(ngModel)]="conteudo.estado">
+     <select [(ngModel)]="conteudo.estado" placeholder="Estado">
         <option value="visto">Visto</option>
         <option value="porVer">Por Ver</option>
     </select>
-    <input [(ngModel)]="conteudo.avaliacao">
-    <input [(ngModel)]="conteudo.genero">
-    <input [(ngModel)]="conteudo.criador">
-    <input [(ngModel)]="conteudo.anoLancamento">
-    <input [(ngModel)]="conteudo.anoFim">
+    <input [(ngModel)]="conteudo.avaliacao" placeholder="Avaliação">
+    <input [(ngModel)]="conteudo.genero" placeholder="Gênero">
+    <input [(ngModel)]="conteudo.criador" placeholder="Criador">
+    <input [(ngModel)]="conteudo.anoLancamento" placeholder="Ano de Lançamento">
+    <input [(ngModel)]="conteudo.anoFim" placeholder="Ano de Fim">
     <button class="salvar" (click)="salvar()">Salvar Alterações</button>
 }
+</section>
