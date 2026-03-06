@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ConteudoMediaService } from '../conteudo-service';
-import { RouterLink, ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Conteudo } from '../interfaces/conteudo';
 import { FormsModule } from '@angular/forms';
-import { Header } from "../header/header";
 
 @Component({
   selector: 'app-atualizar-conteudo',
-  imports: [FormsModule, Header],
+  imports: [FormsModule],
   templateUrl: './atualizar-conteudo.html',
   styleUrl: './atualizar-conteudo.css',
 })

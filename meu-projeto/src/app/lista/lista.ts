@@ -4,12 +4,11 @@ import { CommonModule, NgClass } from '@angular/common';
 import { Conteudo } from '../interfaces/conteudo';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Header } from "../header/header";
 
 
 @Component({
   selector: 'app-lista-media',
-  imports: [RouterLink, FormsModule, NgClass, Header, CommonModule],
+  imports: [RouterLink, FormsModule, NgClass, CommonModule],
   templateUrl: './lista.html',
   styleUrl: './lista.css',
 })

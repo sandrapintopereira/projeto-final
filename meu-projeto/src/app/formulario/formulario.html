@@ -1,4 +1,3 @@
-<app-header></app-header>
 <form [formGroup]="form">
     <input formControlName="titulo" type="text" placeholder="Título">
     @if (form.get('titulo')?.invalid && form.get('titulo')?.touched) {

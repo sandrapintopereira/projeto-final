@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { Conteudo } from '../interfaces/conteudo';
 import { ConteudoMediaService } from '../conteudo-service';
-import { Header } from "../header/header";
 
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Header],
+  imports: [],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
