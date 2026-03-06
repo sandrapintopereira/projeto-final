@@ -10,8 +10,8 @@ import { Header } from "../header/header";
 @Component({
   selector: 'app-formulario-media',
   imports: [ReactiveFormsModule, Header],
-  templateUrl: './formulario-media.html',
-  styleUrl: './formulario-media.css',
+  templateUrl: './formulario.html',
+  styleUrl: './formulario.css',
 })
 export class FormularioMedia {
   constructor(private service: ConteudoMediaService,
@@ -40,9 +40,7 @@ export class FormularioMedia {
     if(this.form.valid) {
       this.service.adicionar(this.form.value as FormConteudo);
       //para voltar para a lista de conteúdos após adicionar um novo conteúdo
-      this.router.navigate(['media']);
-    } else {
-      alert('Por favor, preencha o formulário corretamente.')
+      this.router.navigate(['lista']);
     }
   }
 }
