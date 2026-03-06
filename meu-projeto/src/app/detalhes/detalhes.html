@@ -11,8 +11,8 @@
             <p><strong>Criador:</strong> {{conteudo.criador}}</p>
             <p><strong>Ano de Lançamento:</strong> {{conteudo.anoLancamento}}</p>
             <p><strong>Ano de Fim:</strong> {{conteudo.anoFim}}</p>
-            <button class="btn-novo" [routerLink]="['/atualizar', conteudo.id]">Atualizar</button>
+            <button class="botao-atualizar" [routerLink]="['/atualizar', conteudo.id]">Atualizar</button>
         }
-        <a routerLink="/lista" class="voltar">← Voltar</a>
     </div>
 </div>
+<a routerLink="/lista" class="voltar">← Voltar</a>
