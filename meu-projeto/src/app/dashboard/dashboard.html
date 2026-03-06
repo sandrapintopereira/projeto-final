@@ -1,31 +1,41 @@
-<section class="destaque">
-    <h3>Último adicionado</h3>
-    @if(ultimoAdicionado) {
-        <div>{{ultimoAdicionado.titulo}}</div>
-        <div>{{ultimoAdicionado.tipo}}</div>
-        <div>{{ultimoAdicionado.anoLancamento}}</div>
-        <div>{{ultimoAdicionado.criador}}</div>
-    } @else {
-        <div>Sem Conteúdo</div>
-    }
-</section>
-<section class="cards">
-    <div class="cards-container">
-        <div class="card">
-            <div class="titulo-card">Filme com Melhor Avaliação</div>
-            <div class="card-filme-melhor-avaliacao">{{melhorFilme?.titulo}} {{melhorFilme?.avaliacao}}</div>
-        </div>
-        <div class="card">
-            <div class="titulo-card">Série com Melhor Avaliação</div>
-            <div class="card-serie-melhor-avaliacao">{{melhorSerie?.titulo}} {{melhorSerie?.avaliacao}}</div>
-        </div>
-        <div class="card">
-            <div class="titulo-card">Número de Filmes Vistos</div>
-            <div class="card-filmes">{{filmesVistos}}</div>
-        </div>
-        <div class="card">
-            <div class="titulo-card">Número de Séries Vistas</div>
-            <div class="card-series">{{seriesVistas}}</div>
-        </div>
+<div class="dashboard-container">
+    <div class="header-dashboard">
+        <h2>Dashboard</h2>
     </div>
-</section>
+
+    <section class="destaque">
+        <div class="destaque-titulo">
+            <h3>Último adicionado</h3>
+        </div>
+        <div class="destaque-conteudo">
+        @if(ultimoAdicionado) {
+            <div>{{ultimoAdicionado.titulo}}</div>
+            <div>{{ultimoAdicionado.tipo}}</div>
+            <div>{{ultimoAdicionado.anoLancamento}}</div>
+            <div>{{ultimoAdicionado.criador}}</div>
+        } @else {
+            <div>Sem Conteúdo</div>
+        }
+        </div>
+        </section>
+    <section class="cards">
+        <div class="cards-container">
+            <div class="card">
+                <div class="titulo-card">Filme com Melhor Avaliação</div>
+                <div class="card-filme-melhor-avaliacao">{{melhorFilme?.titulo}} {{melhorFilme?.avaliacao}}</div>
+            </div>
+            <div class="card">
+                <div class="titulo-card">Série com Melhor Avaliação</div>
+                <div class="card-serie-melhor-avaliacao">{{melhorSerie?.titulo}} {{melhorSerie?.avaliacao}}</div>
+            </div>
+            <div class="card">
+                <div class="titulo-card">Número de Filmes Vistos</div>
+                <div class="card-filmes">{{filmesVistos}}</div>
+            </div>
+            <div class="card">
+                <div class="titulo-card">Número de Séries Vistas</div>
+                <div class="card-series">{{seriesVistas}}</div>
+            </div>
+        </div>
+    </section>
+</div>
