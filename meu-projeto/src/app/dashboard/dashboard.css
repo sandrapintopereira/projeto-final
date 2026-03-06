@@ -3,41 +3,70 @@
     gap: 20px;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 20px 0;
 }
 
-.card {
-    border: 1px solid #31052e;
+.destaque {
+    border: 1px solid #310707;       
     border-radius: 12px;
-    padding: 24px;
+    padding: 35px;
     gap: 12px;
-    background-color:rgb(250, 246, 225);
-    max-width: 160px;
-    min-height: 100px;
+    background-color: rgb(219, 199, 98); 
+    max-width: 900px;
+    width: 90%;
+    min-height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+.destaque-titulo {
+    color: #722320;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.item-destaque {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #3a0709;
+    margin-top: 8px;
+}
+
+.card {
+    border: 1px solid #310707;       
+    border-radius: 12px;              
+    padding: 24px;
+    background-color: rgb(219, 199, 98); 
+    min-height: 120px;
+    max-width: 200px;                 
+    flex: 1 1 180px;                  
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.card:hover, .destaque:hover {
+    background: #fafafa;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
 }
 
 .card-filmes, 
 .card-series, 
 .card-filme-melhor-avaliacao, 
 .card-serie-melhor-avaliacao {
-  font-size: 1.7em;
-  font-weight: 700;
-  color: #3b3e42;
-  margin-top: 12px;
-  text-align: center;
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #3a0709;
+    margin: 0;
 }
 
 .titulo-card {
     color: #64748b;
     font-size: 16px;
-    margin-bottom: 10px;
-}
-.destaque {
-    border: 1px solid #31052e;
-    border-radius: 12px;
-    padding: 35px;
-    gap: 12px;
-    background-color:rgb(250, 246, 225);
-    max-width: 1000px;
-    min-height: 100px;
+    margin: 0;
 }
