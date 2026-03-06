@@ -6,7 +6,7 @@
 h1 {
   display: inline-block;
   margin: 0;
-  color: #5e090c;
+  color: #e9dca3;
   font-size: 2em;
   font-weight: 300;
   vertical-align: middle;
@@ -16,6 +16,5 @@ h1 {
   display: flex;
   align-items: center;
   padding: 15px 30px;
-  color: white;
-  border-radius: 2%;
+  background-color: rgb(4, 17, 88);
 }

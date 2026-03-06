@@ -48,9 +48,9 @@ export class ListaMedia implements OnInit {
     return lista;
   }
 
-  remover(id: number) {
-    console.log("ID clicado:", id);
+  remover(event: Event, id: number) {
     this.service.remover(id);
     this.conteudos = this.service.listar();
+    event.stopPropagation();
   }
 }

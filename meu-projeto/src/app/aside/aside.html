@@ -2,20 +2,17 @@
     <nav>
         <app-botao
             texto="Dashboard"
-            routerLink=""
-            [class.active]="paginaAtual === '/dashboard'">
+            link="">
         </app-botao>
 
         <app-botao
             texto="Lista de Conteúdos"
-            routerLink="/lista"
-            [class.active]="paginaAtual === '/lista'">
+            link="/lista">
         </app-botao>
 
         <app-botao
             texto="Adicionar Novo Conteúdo"
-            routerLink="/lista/new"
-            [class.active]="paginaAtual === '/lista/new'">
+            link="/lista/new">
         </app-botao>
     </nav>
 </aside>

@@ -46,24 +46,7 @@ ul{
   font-size:15px;
   color:#332f07;
   margin-top:4px;
-}
 
-.btn-novo { 
-  text-decoration: underline;
-  background: #5e090c; 
-  color: #ccc; 
-  padding: 15px 15px;  
-  border-radius: 5px;
-  margin-bottom: 20px;
-  position: absolute;
-  top: 60px;
-  right: 50px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.btn-novo:hover{
-  background:#7c0f13;
 }
 
 .header-lista {
