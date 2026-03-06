@@ -2,33 +2,28 @@
     <aside class="btn-aside">
         <button class="btn-novo" routerLink="/lista/new">Adicionar Novo</button>
     </aside>
+    
     <div class="header-lista">
         <h2>Lista de Conteúdos</h2>
     </div>
-    <!--VOLTAR AQUI-->
+
     <div class="filtros">
-        <input class="pesquisa"[(ngModel)]="textoPesquisa" placeholder="Pesquisar...">
-    @if(textoPesquisa) {
+        <input class="pesquisa" [(ngModel)]="textoPesquisa" placeholder="Pesquisar...">
         <select class="ordenacao" [(ngModel)]="criterioOrdenacao">
-            <option value="titulo-az">A -> Z</option>
-            <option value="titulo-za">Z -> A</option>
+            <option value="titulo-az">A → Z</option>
+            <option value="titulo-za">Z → A</option>
         </select>
-        @for(conteudoFiltrado of conteudosFiltrados; track conteudoFiltrado) {
-            <li class="item">{{ conteudoFiltrado.titulo }}</li>
-        }
-    }
     </div>
 
     <ul>
-        <!--@for (conteudo of conteudos; track conteudo) {-->
-        <!--PERGUNTAR AO PROFESSOR PORQUE NÃO FICA VERDE OU VERMELHO-->
-        <li [routerLink]="['/detalhe', conteudo.id]" class="item" *ngFor="let conteudo of conteudosOrdenados" [ngClass]="{'visto': conteudo.estado === 'visto', 'porVer': conteudo.estado === 'porVer'}">
+        <li *ngFor="let conteudo of conteudosOrdenados" 
+            [routerLink]="['/detalhe', conteudo.id]" 
+            class="item" 
+            [ngClass]="{'visto': conteudo.estado === 'visto', 'porVer': conteudo.estado === 'porVer'}">
             <strong>{{ conteudo.titulo }}</strong>
             <span>Tipo: {{conteudo.tipo}} || Ano: {{conteudo.anoLancamento}} || Avaliação: {{conteudo.avaliacao}}/10</span>
             <button class="botao-remover" (click)="remover(conteudo.id)">X</button>
         </li>
     </ul>
 </section>
-<!--ver como meter a pesquisa a funcionar -->
-<!--ver a cena de ordenação-->
-<!--ver como meter os detalhes dos filmes na lista melhores-->
+
