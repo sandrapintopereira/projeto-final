@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
 import { Dashboard } from './dashboard/dashboard';
-import { ListaMedia } from './lista-media/lista-media';
-import { DetalhesMedia } from './detalhes-media/detalhes-media';
-import { FormularioMedia } from './formulario-media/formulario-media';
+import { ListaMedia } from './lista/lista';
+import { DetalhesMedia } from './detalhes/detalhes';
+import { FormularioMedia } from './formulario/formulario';
+import { AtualizarConteudo } from './atualizar-conteudo/atualizar-conteudo';
 
 export const routes: Routes = [
     {path: '', component: Dashboard},
-    {path: 'media', component: ListaMedia},
-    {path: 'media/new', component: FormularioMedia},
+    {path: 'lista', component: ListaMedia},
+    {path: 'lista/new', component: FormularioMedia},
     {path: 'detalhe/:id', component: DetalhesMedia},
+    {path: 'atualizar/:id', component: AtualizarConteudo}
 ];

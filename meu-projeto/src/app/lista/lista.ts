@@ -10,8 +10,8 @@ import { Header } from "../header/header";
 @Component({
   selector: 'app-lista-media',
   imports: [RouterLink, FormsModule, NgClass, Header, CommonModule],
-  templateUrl: './lista-media.html',
-  styleUrl: './lista-media.css',
+  templateUrl: './lista.html',
+  styleUrl: './lista.css',
 })
 
 //OnInit para carregar dados/incializar estado

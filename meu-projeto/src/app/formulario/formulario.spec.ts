@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormularioMedia } from './formulario-media';
+import { FormularioMedia } from './formulario';
 
 describe('FormularioMedia', () => {
   let component: FormularioMedia;

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListaMedia } from './lista-media';
+import { ListaMedia } from './lista';
 
 describe('ListaMedia', () => {
   let component: ListaMedia;

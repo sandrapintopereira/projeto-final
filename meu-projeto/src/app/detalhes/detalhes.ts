@@ -7,15 +7,15 @@ import { Header } from '../header/header';
 @Component({
   selector: 'app-detalhes-media',
   imports: [Header, RouterLink],
-  templateUrl: './detalhes-media.html',
-  styleUrl: './detalhes-media.css',
+  templateUrl: './detalhes.html',
+  styleUrl: './detalhes.css',
 })
 export class DetalhesMedia implements OnInit {
   conteudo: Conteudo | undefined;
 
   constructor(private route: ActivatedRoute, private service: ConteudoMediaService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     const id = Number(this.route.snapshot.params['id']);
     this.conteudo = this.service.buscarPeloId(id);
   }

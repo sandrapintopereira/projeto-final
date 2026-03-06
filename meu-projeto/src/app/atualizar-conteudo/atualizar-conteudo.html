@@ -1,0 +1,18 @@
+<app-header></app-header>
+@if(conteudo) {
+    <input [(ngModel)]="conteudo.titulo">
+    <select [(ngModel)]="conteudo.tipo">
+        <option value="filme">Filme</option>
+        <option value="serie">Série</option>
+    </select>
+     <select [(ngModel)]="conteudo.estado">
+        <option value="visto">Visto</option>
+        <option value="porVer">Por Ver</option>
+    </select>
+    <input [(ngModel)]="conteudo.avaliacao">
+    <input [(ngModel)]="conteudo.genero">
+    <input [(ngModel)]="conteudo.criador">
+    <input [(ngModel)]="conteudo.anoLancamento">
+    <input [(ngModel)]="conteudo.anoFim">
+    <button class="salvar" (click)="salvar()">Salvar Alterações</button>
+}
