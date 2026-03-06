@@ -1,15 +1,13 @@
-.content {
+.container {
   display: flex;
+  flex-direction: row;
   min-height: 80vh;
 }
 
 app-aside {
-  width: 250px;
-  flex-shrink: 0;
-  display: block;
-}
+  width: 200px;
+  flex-shrink: 0;}
 
 main {
-  display: block;
-  padding: 20px;
+  flex-grow: 1;
 }
