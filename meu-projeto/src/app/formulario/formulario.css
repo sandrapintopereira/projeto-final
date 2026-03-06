@@ -1,0 +1,74 @@
+form{
+  padding: 25px;
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgb(219, 199, 98);
+  border: 1px solid #310707;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  transition: all 0.2s ease;
+}
+
+form:hover{
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+form input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.seletor{
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form p{
+  margin: -6px 0 6px 0;
+  font-size: 13px;
+  color: #8a0f0f;
+}
+
+.salvar {
+  margin-top: 10px;
+  background: #5e090c;
+  color: #ece6e6;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form button:hover{
+  background:#7c0f13;
+}
+
+form button:disabled{
+  background: #999;
+  cursor: not-allowed;
+}
+
+.voltar {
+  background: #5e090c;
+  color: #ece6e6;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.voltar:hover {
+  background: #7c0f13;
+}
