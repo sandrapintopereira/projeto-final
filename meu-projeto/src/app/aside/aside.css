@@ -1,0 +1,19 @@
+.lateral{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.logotipo{
+  width: 150px;
+  height: 100px;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 20px;
+}

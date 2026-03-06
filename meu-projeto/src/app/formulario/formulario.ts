@@ -4,12 +4,11 @@ import { FormConteudo } from '../interfaces/formConteudo'
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { validarAno } from '../validacao/validacao';
-import { Header } from "../header/header";
 
 
 @Component({
   selector: 'app-formulario-media',
-  imports: [ReactiveFormsModule, Header],
+  imports: [ReactiveFormsModule],
   templateUrl: './formulario.html',
   styleUrl: './formulario.css',
 })

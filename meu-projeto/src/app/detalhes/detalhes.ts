@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ConteudoMediaService } from '../conteudo-service';
 import { Conteudo } from '../interfaces/conteudo';
-import { Header } from '../header/header';
 
 @Component({
   selector: 'app-detalhes-media',
-  imports: [Header, RouterLink],
+  imports: [RouterLink],
   templateUrl: './detalhes.html',
   styleUrl: './detalhes.css',
 })

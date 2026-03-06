@@ -1,0 +1,21 @@
+<aside class="lateral">
+    <nav>
+        <app-botao
+            texto="Dashboard"
+            routerLink=""
+            [class.active]="paginaAtual === '/dashboard'">
+        </app-botao>
+
+        <app-botao
+            texto="Lista de Conteúdos"
+            routerLink="/lista"
+            [class.active]="paginaAtual === '/lista'">
+        </app-botao>
+
+        <app-botao
+            texto="Adicionar Novo Conteúdo"
+            routerLink="/lista/new"
+            [class.active]="paginaAtual === '/lista/new'">
+        </app-botao>
+    </nav>
+</aside>
