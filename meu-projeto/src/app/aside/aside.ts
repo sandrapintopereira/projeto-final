@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router'; 
+import { Router } from '@angular/router'; 
 import { Botao } from '../botao/botao';
 
 @Component({
   selector: 'app-aside',
-  imports: [RouterLink, Botao],
+  imports: [Botao],
   templateUrl: './aside.html',
   styleUrl: './aside.css',
 })
