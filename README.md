@@ -1,6 +1,6 @@
 # Frame Marcado — Watchlist de Filmes & Séries
 
-Projeto final desenvolvido para o módulo de Programação em JavaScript, 2026.
+Projeto final desenvolvido para o módulo de Programação em JavaScript.
 
 ## Descrição
 
