@@ -22,8 +22,8 @@ Aplicação SPA (Single Page Application) desenvolvida em Angular para gerir uma
 
 ## Instalação
 No terminal: 
-npm install -g @angular/cli
-npm install
-ng serve
+- npm install -g @angular/cli
+- npm install
+- ng serve
 
 Abre o browser em `http://localhost:4200`
