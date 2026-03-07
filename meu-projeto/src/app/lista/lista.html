@@ -13,11 +13,16 @@
 
     <ul>
         <li *ngFor="let conteudo of conteudosOrdenados" 
-            [routerLink]="['/detalhe', conteudo.id]" 
-            class="item" 
-            [ngClass]="{'visto': conteudo.estado === 'visto', 'porVer': conteudo.estado === 'porVer'}">
-            <strong>{{ conteudo.titulo }}</strong>
-            <span>Tipo: {{conteudo.tipo}} || Ano: {{conteudo.anoLancamento}} || Avaliação: {{conteudo.avaliacao}}/10 || Estado: {{conteudo.estado}}</span>
+        [routerLink]="['/detalhe', conteudo.id]" class="item">
+            <strong [ngClass]="{'visto': conteudo.estado === 'visto', 'porVer': conteudo.estado === 'porVer'}">
+                {{ conteudo.titulo }}
+            </strong>
+            <div class="info">
+                <span>Tipo: {{conteudo.tipo | titlecase}}</span>
+                <span>Ano: {{conteudo.anoLancamento}}</span>
+                <span>{{conteudo.avaliacao}}/10</span>
+                <span>{{conteudo.estado === 'porVer' ? 'Por Ver' : (conteudo.estado | titlecase)}}</span>
+            </div>
             <button class="botao-remover" (click)="remover($event, conteudo.id)">X</button>
         </li>
     </ul>

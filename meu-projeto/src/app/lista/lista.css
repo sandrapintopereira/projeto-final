@@ -9,7 +9,7 @@ h2 {
 
 .lista { 
   padding: 20px; 
-  max-width: 60%; 
+  max-width: 900px;
   margin: 0 auto
 }
 
@@ -19,15 +19,16 @@ ul{
 
 .item { 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   border: 1px solid #310707; 
-  padding: 20px 25px; 
+  padding: 1.5rem; 
   margin: 14px 0; 
   border-radius: 10px;
   list-style: none;
   background: rgb(219, 199, 98);
   transition: all 0.2s ease;
+  min-width: 0;
 }
 
 .item:hover { 
@@ -36,17 +37,14 @@ ul{
   transform: translateY(-2px);
 }
 
-.item strong{
-  font-size: 20px;
-  color: #3a0709;
-}
-
 .item span{
-  display:block;
-  font-size:15px;
-  color:#332f07;
-  margin-top:4px;
-
+  font-size: 17px;
+  color: #332f07;
+  flex: 1;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .header-lista {
@@ -81,33 +79,49 @@ ul{
   border-radius: 5px;
 }
 
-.visto { 
-  color: rgb(0, 255, 0); 
+strong.visto, strong.porVer { 
+  color: rgba(9, 44, 9, 0.747); 
   font-weight: bold; 
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 180px;
+  min-width: 180px;
 }
 
-.porVer { 
-  color: rgb(255, 0, 21); 
-  font-weight: bold; 
+strong.porVer { 
+  color: rgba(83, 10, 16, 0.795);
 }
 
 .botao-remover {
   border: none;
   background-color: #610a0a;
   color: #fff;
-
   width: 30px;
   height: 30px;
-
   border-radius: 50%;
   cursor: pointer;
-
   font-weight: bold;
-
   transition: 0.2s;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .botao-remover:hover{
   background:#8a0f0f;
   transform: scale(1.1);
+}
+
+.info{
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 15px;
+  color: #332f07;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.info span {
+  white-space: nowrap;
 }
