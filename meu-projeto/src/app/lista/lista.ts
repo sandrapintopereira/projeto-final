@@ -29,17 +29,16 @@ export class ListaMedia implements OnInit {
   }
 
   get conteudosFiltrados(): Conteudo[] { 
-    const todos = this.service.listar();
-    if (this.textoPesquisa) {
-      return todos.filter(c => c.titulo.toLowerCase().includes(this.textoPesquisa.toLowerCase()));
-    }
+    const todos = this.service.listar().filter(c =>
+      !this.textoPesquisa || c.titulo.toLowerCase().includes(this.textoPesquisa.toLowerCase())
+    );
 
-    if(this.estadoFiltro) {
-      return todos.filter(c => c.estado === this.estadoFiltro);
+    if (this.criterioOrdenacao === 'visto' || this.criterioOrdenacao === 'porVer') {
+      return todos.filter(c => c.estado === this.criterioOrdenacao);
     }
 
     return todos;
-  }
+ }
 
   get conteudosOrdenados(): Conteudo[] {
     //cópia de array
@@ -55,7 +54,6 @@ export class ListaMedia implements OnInit {
 
   remover(event: Event, id: number) {
     this.service.remover(id);
-    this.conteudos = this.service.listar();
     event.stopPropagation();
   }
 }
