@@ -58,17 +58,3 @@ form button:disabled{
   background: #999;
   cursor: not-allowed;
 }
-
-.voltar {
-  background: #5e090c;
-  color: #ece6e6;
-  padding: 12px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.voltar:hover {
-  background: #7c0f13;
-}
