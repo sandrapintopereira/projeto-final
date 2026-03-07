@@ -20,6 +20,7 @@ export class ListaMedia implements OnInit {
   //variável para ordenação
   criterioOrdenacao = 'titulo-az';
   conteudos: Conteudo[] = [];
+  estadoFiltro = '';
 
   constructor(private service: ConteudoMediaService) {}
 
@@ -29,11 +30,15 @@ export class ListaMedia implements OnInit {
 
   get conteudosFiltrados(): Conteudo[] { 
     const todos = this.service.listar();
-    if (!this.textoPesquisa) {
-      return todos;
-    } else {
-    return todos.filter(c => c.titulo.toLowerCase().includes(this.textoPesquisa.toLowerCase()));
+    if (this.textoPesquisa) {
+      return todos.filter(c => c.titulo.toLowerCase().includes(this.textoPesquisa.toLowerCase()));
     }
+
+    if(this.estadoFiltro) {
+      return todos.filter(c => c.estado === this.estadoFiltro);
+    }
+
+    return todos;
   }
 
   get conteudosOrdenados(): Conteudo[] {

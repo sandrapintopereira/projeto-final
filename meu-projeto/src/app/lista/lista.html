@@ -9,6 +9,11 @@
             <option value="titulo-az">A → Z</option>
             <option value="titulo-za">Z → A</option>
         </select>
+        <select class="estado" [(ngModel)]="estadoFiltro">
+            <option value="">Todos</option>
+            <option value="visto">Visto</option>
+            <option value="porVer">Por Ver</option>
+        </select>
     </div>
 
     <ul>

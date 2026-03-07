@@ -71,7 +71,7 @@ ul{
   border-radius: 5px;
 }
 
-.ordenacao {
+.ordenacao, .estado {
   width: 100px; 
   padding: 9px; 
   margin-bottom: 20px; 
