@@ -30,7 +30,7 @@ export class FormularioMedia {
     criador: new FormControl('', [Validators.required, Validators.minLength(3)]),
     //chama função de validarAno
     anoLancamento: new FormControl(2026, [Validators.required, validarAno()]),
-    anoFim: new FormControl(null),
+    anoFim: new FormControl(null, [validarAno()]),
   })
 
 

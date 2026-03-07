@@ -30,9 +30,12 @@
         }
         <input formControlName="anoLancamento" type="text" placeholder="Ano de Lançamento">
         @if (form.get('anoLancamento')?.invalid && form.get('anoLancamento')?.touched) {
-            <p>O ano de lançamento é obrigatório.</p>
+            <p>O ano de lançamento é obrigatório e deve ser entre 1900 e 2026.</p>
         }
         <input formControlName="anoFim" type="text" placeholder="Ano de Fim">
+        @if (form.get('anoFim')?.errors?.['validarAnoValidator'] && form.get('anoFim')?.touched) {
+            <p>O ano de fim deve ser entre 1900 e 2026.</p>
+        }
 
         <button class= "salvar" type="submit" (click)="onSubmit()" [disabled]="form.invalid">Salvar</button>
     </form>
