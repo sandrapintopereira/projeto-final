@@ -1,0 +1,42 @@
+.about-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.about-container h2 {
+    color: #5e090c;
+    margin-bottom: 30px;
+}
+
+.about-card {
+    background: rgb(209, 194, 119);
+    border: 1px solid #310707;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    color: #5e090c;
+    margin: 0 0 12px 0;
+}
+
+.about-card p, .about-card li {
+    color: #332f07;
+    line-height: 1.7;
+}
+
+.about-card ul {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 767px) {
+    .about-container {
+        margin: 20px;
+    }
+}

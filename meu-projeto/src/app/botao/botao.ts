@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { isActive, Router, RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-botao',
@@ -13,8 +13,4 @@ export class Botao {
   @Input() link: string = '';
 
   constructor(private router: Router) {}
-
-    get isActive(): boolean {
-    return this.router.url === this.link;
-  }
 }
