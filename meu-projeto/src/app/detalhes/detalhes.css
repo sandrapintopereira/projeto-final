@@ -1,7 +1,10 @@
+.detalhes-wrapper {
+  max-width: 60%;
+  margin: 20px auto;
+}
+
 .detalhes-container {
   padding: 20px; 
-  max-width: 60%; 
-  margin: 20px auto;
   background: rgb(219, 199, 98);
   border: 1px solid #310707; 
   border-radius: 10px;
@@ -33,26 +36,20 @@
   font-size: 18px;
 }
 
-.voltar {
+.botao-atualizar, .voltar {
   background: #5e090c;
-  color: #ccc;
+  color: #e4dbb6cc;
   padding: 12px 20px;
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
 }
 
-.voltar:hover {
+.botao-atualizar:hover, .voltar:hover {
   background: #7c0f13;
-}
-
-.botao-atualizar {
-  background: #5e090c;
-  color: #ccc;
-  padding: 12px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
 }
