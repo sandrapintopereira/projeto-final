@@ -13,7 +13,7 @@ h1, h2, h3 {
 .container {
   display: flex;
   min-height: calc(100vh - 80px - 60px);
-  background: linear-gradient(to right, #f0e8c8 200px, #fdf6e3 200px);
+  background: linear-gradient(to right, #f0e8c8 250px, #fdf6e3 250px);
 }
 
 main {

@@ -51,7 +51,6 @@ h2 {
   border: 1px solid #310707;
   border-radius: 12px;
   padding: 24px;
-  background-color: rgb(219, 199, 98);
   min-height: 180px;
   box-sizing: border-box;
   display: flex;
@@ -72,6 +71,7 @@ h2 {
   font-size:30px;
   color:#332f07;
   align-items: left;
+  background-color: rgb(219, 199, 98);
 }
 
 .titulo-card {
