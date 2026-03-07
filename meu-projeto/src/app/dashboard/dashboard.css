@@ -1,8 +1,7 @@
-/* --- Header e Título --- */
 .header-dashboard {
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 60px; /* Mais margem para o destaque respirar */
+  margin-bottom: 60px;
   width: 100%;
 }
 
@@ -15,20 +14,18 @@ h2 {
   position: relative;
 }
 
-/* --- Layout Principal (Containers) --- */
 .destaque, 
 .cards-container {
-  max-width: 1200px; /* Ocupa mais espaço na página */
-  width: 90%;        /* Responsividade para ecrãs menores */
-  margin: 0 auto;    /* Centraliza os blocos na página */
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* --- Secção de Destaque --- */
 .destaque {
   border: 1px solid #310707;       
   border-radius: 12px;
-  padding: 45px;    /* Aumentado para preencher melhor o espaço maior */
+  padding: 45px;
   background-color: rgb(219, 199, 98); 
   margin-bottom: 30px;
   text-align: center;
@@ -39,19 +36,17 @@ h2 {
   transition: all 0.2s ease;
 }
 
-/* --- Container de Cards --- */
 .cards-container {
   display: flex;
   gap: 25px;
   flex-direction: row;
-  justify-content: space-between; /* Alinha as extremidades com o destaque */
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px 0;
 }
 
-/* --- Estilo dos Cards --- */
 .card {
-  flex: 1 1 250px;  /* Permite que os cards cresçam proporcionalmente */
+  flex: 1 1 250px;
   max-width: 280px; 
   border: 1px solid #310707;
   border-radius: 12px;
@@ -61,15 +56,9 @@ h2 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Alinhamento entre título e valor */
+  justify-content: space-between;
   text-align: center;
   transition: all 0.2s ease;
-}
-
-.card:hover, .destaque:hover {
-  background: #fafafa;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transform: translateY(-3px);
 }
 
 .destaque-titulo {

@@ -10,7 +10,7 @@
         <div class="destaque-conteudo">
         @if(ultimoAdicionado) {
             <div>{{ultimoAdicionado.titulo}}</div>
-            <div>{{ultimoAdicionado.tipo}}</div>
+            <div>{{ultimoAdicionado.tipo | titlecase}}</div>
             <div>{{ultimoAdicionado.anoLancamento}}</div>
             <div>{{ultimoAdicionado.criador}}</div>
         } @else {
@@ -22,11 +22,11 @@
         <div class="cards-container">
             <div class="card">
                 <div class="titulo-card">Filme com Melhor Avaliação</div>
-                <div class="card-filme-melhor-avaliacao">{{melhorFilme?.titulo}} {{melhorFilme?.avaliacao}}</div>
+                <div class="card-filme-melhor-avaliacao">{{melhorFilme?.titulo}}</div>
             </div>
             <div class="card">
                 <div class="titulo-card">Série com Melhor Avaliação</div>
-                <div class="card-serie-melhor-avaliacao">{{melhorSerie?.titulo}} {{melhorSerie?.avaliacao}}</div>
+                <div class="card-serie-melhor-avaliacao">{{melhorSerie?.titulo}}</div>
             </div>
             <div class="card">
                 <div class="titulo-card">Número de Filmes Vistos</div>
