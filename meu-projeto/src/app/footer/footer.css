@@ -1,17 +1,21 @@
 .footer {
-  background: #2c3e50c9;
-  color: white;
+  background: rgb(1, 11, 68);
+  color: #a89d6e;
   padding: 1rem;
   text-align: center;
-  max-height: 10vh;
 }
 
 .gitHub {
-  color: rgb(77, 0, 0);
+  color: #e9dca3;
   text-decoration: underline;
   margin-left: 1rem;
   
   &:hover {
     color: #ff6b35;
   }
+}
+
+.footer-content p {
+  margin: 4px 0;
+  font-size: 0.85em;
 }
