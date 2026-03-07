@@ -20,3 +20,15 @@ main {
   flex: 1;
   padding: 20px;
 }
+
+app-footer {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    background: #fdf6e3;
+  }
+}

@@ -94,3 +94,23 @@ h2 {
   color: #3a0709;
   margin: 0;
 }
+
+@media (max-width: 767px) {
+  .header-dashboard {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .destaque, .cards-container {
+    width: 95%;
+  }
+
+  .destaque {
+    padding: 25px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 12px;
   transition: all 0.2s ease;
+  width: 90%;
 }
 
 .atualizar-conteudo h2{
