@@ -1,17 +1,23 @@
-<div class="detalhes-container">
-    <div class="detalhes-card">
-        @if (conteudo) {
-            <h1>{{conteudo.titulo}}</h1>
-            <p><strong>Tipo:</strong> {{conteudo.tipo}}</p>
-            <p><strong>Ano:</strong> {{conteudo.anoLancamento}}</p>
-            <p><strong>Estado:</strong> {{conteudo.estado}}</p>
-            <p><strong>Avaliação:</strong> {{conteudo.avaliacao}}/10</p>
-            <p><strong>Género:</strong> {{conteudo.genero}}</p>
-            <p><strong>Criador:</strong> {{conteudo.criador}}</p>
-            <p><strong>Ano de Lançamento:</strong> {{conteudo.anoLancamento}}</p>
-            <p><strong>Ano de Fim:</strong> {{conteudo.anoFim}}</p>
-            <button class="botao-atualizar" [routerLink]="['/atualizar', conteudo.id]">Atualizar</button>
-        }
+<div class="detalhes-wrapper">
+    <div class="detalhes-container">
+        <div class="detalhes-card">
+            @if (conteudo) {
+                <h1>{{conteudo.titulo}}</h1>
+                <p><strong>Tipo:</strong> {{conteudo.tipo | titlecase}}</p>
+                <p><strong>Ano:</strong> {{conteudo.anoLancamento}}</p>
+                <p><strong>Estado:</strong> {{conteudo.estado === 'porVer' ? 'Por Ver' : (conteudo.estado | titlecase)}}</p>
+                @if(conteudo.avaliacao) {
+                    <p><strong>Avaliação:</strong> {{conteudo.avaliacao}}/10</p>
+                }
+                <p><strong>Género:</strong> {{conteudo.genero}}</p>
+                <p><strong>Criador:</strong> {{conteudo.criador}}</p>
+                <p><strong>Ano de Lançamento:</strong> {{conteudo.anoLancamento}}</p>
+                @if(conteudo.anoFim) {
+                    <p><strong>Ano de Fim:</strong> {{conteudo.anoFim}}</p>
+                }
+                <button class="botao-atualizar" [routerLink]="['/atualizar', conteudo.id]">Atualizar</button>
+            }
+        </div>
     </div>
+    <a routerLink="/lista" class="voltar">← Voltar</a>
 </div>
-<a routerLink="/lista" class="voltar">← Voltar</a>

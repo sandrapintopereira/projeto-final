@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ConteudoMediaService } from '../conteudo-service';
 import { Conteudo } from '../interfaces/conteudo';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-detalhes-media',
-  imports: [RouterLink],
+  imports: [RouterLink, TitleCasePipe],
   templateUrl: './detalhes.html',
   styleUrl: './detalhes.css',
 })
