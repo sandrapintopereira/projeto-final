@@ -26,3 +26,15 @@ button:hover {
   background-color: #c9a800;
   color: #1a1a1a;
 }
+
+@media (max-width: 767px) {
+  button {
+    width: auto;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .botao-menu {
+    width: auto;
+  }
+}

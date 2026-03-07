@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Conteudo } from '../interfaces/conteudo';
 import { ConteudoMediaService } from '../conteudo-service';
+import { TitleCasePipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [TitleCasePipe],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
