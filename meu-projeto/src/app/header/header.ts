@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [UpperCasePipe],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
-  titulo: string = "Catálogo de Filmes/Séries";
+  titulo: string = "Frame Marcado";
   logotipo: string = 'logo.png';
 }

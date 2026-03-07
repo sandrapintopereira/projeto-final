@@ -1,20 +1,52 @@
+:host {
+  display: flex;
+  align-items: flex-end;
+  padding: 15px 30px;
+  background-color: rgb(1, 11, 68);
+  gap: 15px;
+}
+
 .logo {
-  margin-right: 15px;
   border-radius: 2%;
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.header-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 h1 {
-  display: inline-block;
   margin: 0;
-  color: #e9dca3;
+  color: #ece4c1;
   font-size: 2em;
   font-weight: 300;
-  vertical-align: middle;
 }
 
-:host {
-  display: flex;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: rgb(4, 17, 88);
+h2 {
+  margin: 0;
+  color: #a89d6e;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  :host {
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  h2 {
+    font-size: 0.80em;
+  }
 }
