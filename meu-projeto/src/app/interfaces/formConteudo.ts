@@ -1,6 +1,6 @@
 export interface FormConteudo {
   titulo: string;
-  tipo: 'filme' | 'serie';
+  tipo: 'filme' | 'série';
   estado: 'visto' | 'porVer';
   avaliacao?: number;
   genero: string;

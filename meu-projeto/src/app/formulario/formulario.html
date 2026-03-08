@@ -7,7 +7,7 @@
         }
         <select formControlName="tipo" class="seletor">
                 <option value="filme">Filme</option>
-                <option value="serie">Série</option>
+                <option value="série">Série</option>
         </select>
         @if (form.get('tipo')?.invalid && form.get('tipo')?.touched) {
             <p>O tipo é obrigatório.</p>
@@ -26,7 +26,7 @@
         }
         <input formControlName="criador" type="text" placeholder="Criador">
         @if (form.get('criador')?.invalid && form.get('criador')?.touched) {
-            <p>O criador é obrigatório.</p>
+            <p>O criador é obrigatório e deve ter pelo menos 3 caracteres.</p>
         }
         <input formControlName="anoLancamento" type="text" placeholder="Ano de Lançamento">
         @if (form.get('anoLancamento')?.invalid && form.get('anoLancamento')?.touched) {
