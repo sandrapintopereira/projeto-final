@@ -35,7 +35,7 @@ export class Dashboard {
       let contador = 0;
 
       for(let conteudo of this.conteudos) {
-        if(conteudo.tipo === 'serie' && conteudo.estado === 'visto') {
+        if(conteudo.tipo === 'série' && conteudo.estado === 'visto') {
           contador++;
 
         }
@@ -71,7 +71,7 @@ export class Dashboard {
       const series = [];
 
       for(let conteudo of this.conteudos) {
-        if(conteudo.tipo === 'serie') {
+        if(conteudo.tipo === 'série') {
           series.push(conteudo);
         }
       }
