@@ -31,6 +31,7 @@ export class FormularioMedia {
     //chama função de validarAno
     anoLancamento: new FormControl(2026, [Validators.required, validarAno()]),
     anoFim: new FormControl(null, [validarAno()]),
+    temporadas: new FormControl(null, [Validators.min(1)])
   })
 
 
