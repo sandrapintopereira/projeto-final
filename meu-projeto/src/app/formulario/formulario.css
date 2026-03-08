@@ -1,29 +1,23 @@
 .formulario-container {
   max-width: 600px;
-  margin: 40px auto;
+  margin: 40px auto 0 auto;
 }
 
 .formulario-container h2 {
   color: #5e090c;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 form{
   padding: 25px;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 0;
   background: rgb(219, 199, 98);
   border: 1px solid #310707;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: all 0.2s ease;
-}
-
-form:hover{
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
 }
 
 form input{
@@ -65,4 +59,11 @@ form button:hover{
 form button:disabled{
   background: #999;
   cursor: not-allowed;
+}
+
+h2 {
+  margin: 0;
+  color: #5e090c;
+  font-size: 1.5em;
+  font-weight: 300;
 }

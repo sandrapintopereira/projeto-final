@@ -35,6 +35,14 @@
     gap: 8px;
 }
 
+h2 {
+  margin: 0;
+  color: #5e090c;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+
 @media (max-width: 767px) {
     .about-container {
         margin: 20px;
