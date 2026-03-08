@@ -1,7 +1,7 @@
 .header-dashboard {
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -9,7 +9,7 @@ h2 {
   display: inline-block;
   margin: 0;
   color: #5e090c;
-  font-size: 2.2em;
+  font-size: 2.5em;
   font-weight: 600;
   position: relative;
 }
@@ -25,15 +25,47 @@ h2 {
 .destaque {
   border: 1px solid #310707;       
   border-radius: 12px;
-  padding: 45px;
-  background-color: rgb(219, 199, 98); 
+  padding: 25px 40px 40px 40px;
+  background-color: rgba(219, 199, 98, 0.753);
   margin-bottom: 30px;
-  text-align: center;
+}
+
+.destaque-titulo {
+  color: #96071a;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin: 0 0 50px 0;
+  letter-spacing: 1px;
+}
+
+.destaque-conteudo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  transition: all 0.2s ease;
+  gap: 30px;
+}
+
+.destaque-nome {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #3a0709;
+  flex-shrink: 0;
+}
+
+.destaque-divisor {
+  width: 1px;
+  height: 90px;
+  background-color: #310707;
+  flex-shrink: 0;
+}
+
+.destaque-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 1.1em;
+  color: #332f07;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .cards-container {
@@ -57,27 +89,11 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  transition: all 0.2s ease;
-}
-
-.destaque-titulo {
-  color: #96071a;
-  font-size: 25px; 
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.destaque-conteudo {
-  font-size:30px;
-  color:#332f07;
-  align-items: left;
-  background-color: rgb(219, 199, 98);
 }
 
 .titulo-card {
   color: #96071a;
   font-size: 25px; 
-  font-weight: 500;
   margin-bottom: 10px;
   min-height: 40px;
   display: flex;
@@ -90,7 +106,7 @@ h2 {
 .card-filme-melhor-avaliacao, 
 .card-serie-melhor-avaliacao {
   font-size: 1.6em;
-  font-weight: 700;
+  font-weight: 550;
   color: #3a0709;
   margin: 0;
 }
@@ -107,6 +123,16 @@ h2 {
 
   .destaque {
     padding: 25px;
+  }
+
+  .destaque-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .destaque-divisor {
+    width: 80px;
+    height: 1px;
   }
 
   .card {
