@@ -28,6 +28,7 @@ export class AtualizarConteudo implements OnInit {
       //chama função de validarAno
       anoLancamento: new FormControl(2026, [Validators.required, validarAno()]),
       anoFim:  new FormControl<number | null | undefined>(null, [validarAno()]),
+      temporadas: new FormControl<number | null | undefined>(null, [Validators.min(1)])
     })
 
   constructor(private route: ActivatedRoute, 

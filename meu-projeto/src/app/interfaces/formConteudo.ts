@@ -7,4 +7,5 @@ export interface FormConteudo {
   criador: string;
   anoLancamento: number;
   anoFim?: number;
+  temporadas?: number;
 }

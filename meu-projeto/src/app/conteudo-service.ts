@@ -57,6 +57,8 @@ export class ConteudoMediaService {
       criador: dados.criador,
       anoLancamento: dados.anoLancamento,
       criadoEm: new Date(),
+      temporadas: dados.temporadas ?? undefined,
+      anoFim: dados.anoFim ?? undefined
      };
   
      this.conteudos.push(novoConteudo);

@@ -4,6 +4,9 @@
             @if (conteudo) {
                 <h1>{{conteudo.titulo}}</h1>
                 <p><strong>Tipo:</strong> {{conteudo.tipo | titlecase}}</p>
+                @if (conteudo.tipo === 'série') {
+                <p><strong>Temporadas:</strong> {{conteudo.temporadas}}</p>
+                }
                 <p><strong>Ano:</strong> {{conteudo.anoLancamento}}</p>
                 <p><strong>Estado:</strong> {{conteudo.estado === 'porVer' ? 'Por Ver' : (conteudo.estado | titlecase)}}</p>
                 @if(conteudo.avaliacao) {

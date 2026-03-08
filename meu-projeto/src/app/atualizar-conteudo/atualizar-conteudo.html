@@ -9,6 +9,9 @@
                 <option value="filme">Filme</option>
                 <option value="série">Série</option>
         </select>
+        @if (form.get('tipo')?.value === 'série') {
+            <input formControlName="temporadas" type="text" placeholder="Número de Temporadas">
+        }
         @if (form.get('tipo')?.invalid && form.get('tipo')?.touched) {
             <p>O tipo é obrigatório.</p>
         }
