@@ -1,20 +1,41 @@
-<section class="atualizar-conteudo">
+<section class="atualizar-container">
     <h2>Atualizar Conteúdo</h2>
-@if(conteudo) {
-    <input [(ngModel)]="conteudo.titulo" placeholder="Título">
-    <select [(ngModel)]="conteudo.tipo" placeholder="Tipo">
-        <option value="filme">Filme</option>
-        <option value="série">Série</option>
-    </select>
-     <select [(ngModel)]="conteudo.estado" placeholder="Estado">
-        <option value="visto">Visto</option>
-        <option value="porVer">Por Ver</option>
-    </select>
-    <input [(ngModel)]="conteudo.avaliacao" placeholder="Avaliação">
-    <input [(ngModel)]="conteudo.genero" placeholder="Gênero">
-    <input [(ngModel)]="conteudo.criador" placeholder="Criador">
-    <input [(ngModel)]="conteudo.anoLancamento" placeholder="Ano de Lançamento">
-    <input [(ngModel)]="conteudo.anoFim" placeholder="Ano de Fim">
-    <button class="salvar" (click)="salvar()">Salvar Alterações</button>
-}
+    <form [formGroup]="form">
+        <input formControlName="titulo" type="text" placeholder="Título">
+        @if (form.get('titulo')?.invalid && form.get('titulo')?.touched) {
+            <p>O título é obrigatório e deve ter pelo menos 3 caracteres.</p>
+        }
+        <select formControlName="tipo" class="seletor">
+                <option value="filme">Filme</option>
+                <option value="série">Série</option>
+        </select>
+        @if (form.get('tipo')?.invalid && form.get('tipo')?.touched) {
+            <p>O tipo é obrigatório.</p>
+        }
+        <select formControlName="estado" class="seletor">
+                <option value="visto">Visto</option>
+                <option value="porVer">Por Ver</option>
+        </select>
+        @if (form.get('estado')?.invalid && form.get('estado')?.touched) {
+            <p>O estado é obrigatório.</p>
+        }
+        <input formControlName="avaliacao" type="text" placeholder="Avaliação 0/10">
+        <input formControlName="genero" type="text" placeholder="Género">
+        @if (form.get('genero')?.invalid && form.get('genero')?.touched) {
+            <p>O género é obrigatório.</p>
+        }
+        <input formControlName="criador" type="text" placeholder="Criador">
+        @if (form.get('criador')?.invalid && form.get('criador')?.touched) {
+            <p>O criador é obrigatório e deve ter pelo menos 3 caracteres.</p>
+        }
+        <input formControlName="anoLancamento" type="text" placeholder="Ano de Lançamento">
+        @if (form.get('anoLancamento')?.invalid && form.get('anoLancamento')?.touched) {
+            <p>O ano de lançamento é obrigatório e deve ser entre 1900 e 2026.</p>
+        }
+        <input formControlName="anoFim" type="text" placeholder="Ano de Fim">
+        @if (form.get('anoFim')?.errors?.['validarAnoValidator'] && form.get('anoFim')?.touched) {
+            <p>O ano de fim deve ser entre 1900 e 2026.</p>
+        }
+        <button class="salvar" (click)="salvar()">Salvar Alterações</button>
+    </form>
 </section>
