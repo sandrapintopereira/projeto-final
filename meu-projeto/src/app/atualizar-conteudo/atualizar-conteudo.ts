@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ConteudoMediaService } from '../conteudo-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Conteudo } from '../interfaces/conteudo';
@@ -12,43 +12,43 @@ import { validarAno } from '../validacao/validacao';
   styleUrl: './atualizar-conteudo.css',
 })
 export class AtualizarConteudo implements OnInit {
+  private route = inject(ActivatedRoute);
+  private service = inject(ConteudoMediaService);
+  private router = inject(Router);
+
   conteudo: Conteudo | undefined;
 
   form = new FormGroup({
-      //validação de 3 caracteres
-      titulo: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      tipo: new FormControl('', [Validators.required]),
-      estado: new FormControl('', [Validators.required]),
-      //validação de 0 a 10 a avaliação
-      avaliacao: new FormControl(0, [Validators.min(0), Validators.max(10)]),
-      //validação de 2 caracteres
-      genero: new FormControl('', [Validators.required, Validators.minLength(2)]),
-      //validação de 3 caracteres
-      criador: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      //chama função de validarAno
-      anoLancamento: new FormControl(2026, [Validators.required, validarAno()]),
-      anoFim:  new FormControl<number | null | undefined>(null, [validarAno()]),
-      temporadas: new FormControl<number | null | undefined>(null, [Validators.min(1)])
-    })
-
-  constructor(private route: ActivatedRoute, 
-    private service: ConteudoMediaService,
-    private router: Router) {}
+    //validação de 3 caracteres
+    titulo: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    tipo: new FormControl('', [Validators.required]),
+    estado: new FormControl('', [Validators.required]),
+    //validação de 0 a 10 a avaliação
+    avaliacao: new FormControl(0, [Validators.min(0), Validators.max(10)]),
+    //validação de 2 caracteres
+    genero: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    //validação de 3 caracteres
+    criador: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    //chama função de validarAno
+    anoLancamento: new FormControl(2026, [Validators.required, validarAno()]),
+    anoFim: new FormControl<number | null | undefined>(null, [validarAno()]),
+    temporadas: new FormControl<number | null | undefined>(null, [Validators.min(1)]),
+  });
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.params['id']);
     this.conteudo = this.service.buscarPeloId(id);
 
-    if(this.conteudo) {
+    if (this.conteudo) {
       this.form.patchValue(this.conteudo);
     }
   }
-  
+
   salvar() {
-    if(this.conteudo) {
-    const id = Number(this.route.snapshot.params['id']);
-    this.service.atualizar(this.conteudo);
-    this.router.navigate(['detalhe', id]);
+    if (this.conteudo) {
+      const id = Number(this.route.snapshot.params['id']);
+      this.service.atualizar(this.conteudo);
+      this.router.navigate(['detalhe', id]);
     }
   }
 }

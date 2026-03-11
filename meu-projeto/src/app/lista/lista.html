@@ -12,8 +12,8 @@
     </div>
 
     <ul>
-        <li *ngFor="let conteudo of conteudosOrdenados" 
-        [routerLink]="['/detalhe', conteudo.id]" class="item">
+        @for(conteudo of conteudosFiltrados; track conteudo.id) {
+        <li [routerLink]="['/detalhe', conteudo.id]" class="item">
             <strong [ngClass]="{'visto': conteudo.estado === 'visto', 'porVer': conteudo.estado === 'porVer'}">
                 {{ conteudo.titulo }}
             </strong>
@@ -24,7 +24,7 @@
                 <span>{{conteudo.estado === 'porVer' ? 'Por Ver' : (conteudo.estado | titlecase)}}</span>
             </div>
             <button class="botao-remover" (click)="remover($event, conteudo.id)">X</button>
-        </li>
+        </li>}
     </ul>
 </section>
 

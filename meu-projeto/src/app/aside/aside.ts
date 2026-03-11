@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { Botao } from '../botao/botao';
 
 @Component({
@@ -9,9 +9,9 @@ import { Botao } from '../botao/botao';
   styleUrl: './aside.css',
 })
 export class Aside {
-  constructor(private router: Router) {}
+  private router = inject(Router);
 
   get paginaAtual(): string {
-    return this.router.url
+    return this.router.url;
   }
 }

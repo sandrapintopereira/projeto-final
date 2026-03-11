@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ConteudoMediaService } from '../conteudo-service';
-import { FormConteudo } from '../interfaces/formConteudo'
+import { FormConteudo } from '../interfaces/formConteudo';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { validarAno } from '../validacao/validacao';
-
 
 @Component({
   selector: 'app-formulario-media',
@@ -13,9 +12,8 @@ import { validarAno } from '../validacao/validacao';
   styleUrl: './formulario.css',
 })
 export class FormularioMedia {
-  constructor(private service: ConteudoMediaService,
-    private router: Router,
-  ) {}
+  private service = inject(ConteudoMediaService);
+  private router = inject(Router);
 
   form = new FormGroup({
     //validação de 3 caracteres
@@ -31,14 +29,13 @@ export class FormularioMedia {
     //chama função de validarAno
     anoLancamento: new FormControl(2026, [Validators.required, validarAno()]),
     anoFim: new FormControl(null, [validarAno()]),
-    temporadas: new FormControl(null, [Validators.min(1)])
-  })
-
+    temporadas: new FormControl(null, [Validators.min(1)]),
+  });
 
   onSubmit() {
     const value = this.form.value;
-    if(this.form.valid) {
-      this.service.adicionar(this.form.value as FormConteudo);
+    if (this.form.valid) {
+      this.service.adicionar(value as FormConteudo);
       //para voltar para a lista de conteúdos após adicionar um novo conteúdo
       this.router.navigate(['lista']);
     }

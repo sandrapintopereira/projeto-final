@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 
@@ -9,8 +9,8 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './botao.css',
 })
 export class Botao {
-  @Input() texto: string = '';
-  @Input() link: string = '';
+  private router = inject(Router);
 
-  constructor(private router: Router) {}
+  @Input() texto = '';
+  @Input() link = '';
 }

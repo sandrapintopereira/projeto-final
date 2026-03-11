@@ -8,6 +8,6 @@ import { UpperCasePipe } from '@angular/common';
   styleUrl: './header.css',
 })
 export class Header {
-  titulo: string = "Frame Marcado";
-  logotipo: string = 'logo.png';
+  titulo = "Frame Marcado";
+  logotipo = 'logo.png';
 }

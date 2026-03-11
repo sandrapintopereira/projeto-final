@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ConteudoMediaService } from '../conteudo-service';
 import { Conteudo } from '../interfaces/conteudo';
@@ -11,9 +11,10 @@ import { TitleCasePipe } from '@angular/common';
   styleUrl: './detalhes.css',
 })
 export class DetalhesMedia implements OnInit {
-  conteudo: Conteudo | undefined;
+  private route = inject(ActivatedRoute);
+  private service = inject(ConteudoMediaService);
 
-  constructor(private route: ActivatedRoute, private service: ConteudoMediaService) {}
+  conteudo: Conteudo | undefined;
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.params['id']);
