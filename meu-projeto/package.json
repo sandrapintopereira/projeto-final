@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-mode=static --no-prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:meu-projeto": "node dist/meu-projeto/server/server.mjs",
