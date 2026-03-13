@@ -1,0 +1,9 @@
+{
+    "users": [
+        {"id": 1, "nome": "Sandra Pereira"},
+        {"id": 2, "nome": "Sofia Carvalho"},
+        {"id": 3, "nome": "João Silva"},
+        {"id": 4, "nome": "Maria Oliveira"},
+        {"id": 5, "nome": "Pedro Santos"}
+    ]
+}
