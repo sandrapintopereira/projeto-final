@@ -1,9 +1,9 @@
 {
     "users": [
-        {"id": 1, "nome": "Sandra Pereira"},
-        {"id": 2, "nome": "Sofia Carvalho"},
-        {"id": 3, "nome": "João Silva"},
-        {"id": 4, "nome": "Maria Oliveira"},
-        {"id": 5, "nome": "Pedro Santos"}
+        {"id": 1, "username": "Sandra Pereira", "password": "1234"},
+        {"id": 2, "username": "Sofia Carvalho", "password": "1234"},
+        {"id": 3, "username": "João Silva", "password": "1234"},
+        {"id": 4, "username": "Maria Oliveira", "password": "1234"},
+        {"id": 5, "username": "Pedro Santos", "password": "1234"}
     ]
 }

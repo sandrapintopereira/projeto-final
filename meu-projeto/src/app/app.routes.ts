@@ -5,6 +5,7 @@ import { DetalhesMedia } from './detalhes/detalhes';
 import { FormularioMedia } from './formulario/formulario';
 import { AtualizarConteudo } from './atualizar-conteudo/atualizar-conteudo';
 import { About } from './about/about';
+import { Login } from './login/login';
 
 export const routes: Routes = [
     {path: '', component: Dashboard},
@@ -13,4 +14,5 @@ export const routes: Routes = [
     {path: 'detalhe/:id', component: DetalhesMedia},
     {path: 'atualizar/:id', component: AtualizarConteudo},
     {path: 'about', component: About},
+    {path: 'login', component: Login},
 ];

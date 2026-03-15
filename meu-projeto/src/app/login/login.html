@@ -1,0 +1,12 @@
+<section class="login">
+  <h2>Login</h2>
+
+  <input [(ngModel)]="username" placeholder="Username" />
+  <input [(ngModel)]="password" placeholder="Password" />
+  
+  <button (click)="login()">Entrar</button>
+
+  @if(erro) {
+    <p class="erro">{{ erro }}</p>
+  }
+</section>
