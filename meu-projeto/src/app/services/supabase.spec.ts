@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ConteudoMediaService } from './conteudo-service';
+import { Supabase } from './supabase';
 
-describe('ConteudoMediaService', () => {
-  let service: ConteudoMediaService;
+describe('Supabase', () => {
+  let service: Supabase;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ConteudoMediaService);
+    service = TestBed.inject(Supabase);
   });
 
   it('should be created', () => {
