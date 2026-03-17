@@ -1,9 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../../environments/environment.development';
-import { User } from '../interfaces/user';
+import { Supabase } from '../services/supabase';
 
 @Component({
   selector: 'app-login',
@@ -12,24 +10,42 @@ import { User } from '../interfaces/user';
   styleUrl: './login.css',
 })
 export class Login {
-  private http = inject(HttpClient);
   private router = inject(Router);
+  private supabaseService = inject(Supabase)
 
   username = '';
   erro = '';
   password = '';
 
-  login() {
-    this.http.get<User[]>(`${environment.apiUrl}/users`).subscribe(users => {
-      const foundUser = users.find(
-          u => u.username === this.username && u.password === this.password
-        );
+  async login() {
+    this.erro = '';
 
-        if (foundUser) {
+    const user = await this.supabaseService.login(this.username, this.password);
+
+        if (user) {
           this.router.navigate(['/lista']);
         } else {
           this.erro = 'Utilizador inválido ou palavra-passe incorreta.';
         }
-      });
+  }
+
+  async registar() {
+    this.erro = '';
+
+    const userNovo = this.username.trim();
+    const passwordNova = this.password.trim();
+
+    if(!userNovo || !passwordNova) {
+      this.erro = 'Preencha username e password.';
+      return;
     }
- }   
+
+    const created = await this.supabaseService.createUser(userNovo, passwordNova);
+
+    if(!created) {
+      this.erro = 'Erro ao criar utilizador.';
+      return;
+    }
+  }
+}
+  

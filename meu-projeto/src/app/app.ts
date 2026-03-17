@@ -3,8 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Aside } from './aside/aside'
 import { Footer } from './footer/footer';
-import { environment } from '../environments/environment.development';
-
 
 @Component({
   selector: 'app-root',
@@ -16,15 +14,6 @@ export class App {
   protected readonly title = signal('meu-projeto');
 }
 
-async function loadUsers() {
-    if(typeof window === 'undefined') return 
-    const response = await fetch(environment.apiUrl + '/users');
-    const users = await response.json();
-
-    console.log(users);
-  }
-
-loadUsers();
 
 /*async function createUser() {
 const response = await fetch(environment.apiUrl + '/users', {
