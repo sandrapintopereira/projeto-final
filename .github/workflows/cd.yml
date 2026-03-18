@@ -1,7 +1,7 @@
 name: Vercel Production Deployment
 
 on:
-  pull_request:
+  push:
     branches:
       - feature/ci-pipeline
 
@@ -49,10 +49,6 @@ jobs:
             supabaseKey: '${SUPABASE_KEY}'
           };
           EOF
-          
-      - name: Install dependencies
-        run: npm ci
-        working-directory: meu-projeto
         
       - name: Build Project Artifacts
         working-directory: meu-projeto
