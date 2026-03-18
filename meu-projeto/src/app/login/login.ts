@@ -38,7 +38,7 @@ export class Login {
     if(!userNovo || !passwordNova) {
       this.erro = 'Preencha username e password.';
       return;
-    }
+    };
 
     const created = await this.supabaseService.createUser(userNovo, passwordNova);
 
