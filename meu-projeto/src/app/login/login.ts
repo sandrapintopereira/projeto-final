@@ -46,6 +46,6 @@ export class Login {
       this.erro = 'Erro ao criar utilizador.';
       return;
     }
-  }
+  };
 }
   
