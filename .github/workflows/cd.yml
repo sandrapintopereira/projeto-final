@@ -34,12 +34,14 @@ jobs:
 
       - name: Generate environment.ts
         run: |
-            mkdir -p meu-projeto/src/environments
-            cat > meu-projeto/src/environments/environment.ts <<EOF
-            export const environment = {
-              production: true
-            };
-            EOF
+          mkdir -p meu-projeto/src/environments
+          cat > meu-projeto/src/environments/environment.ts <<EOF
+          export const environment = {
+            production: true,
+            supabaseUrl: '${{ secrets.SUPABASE_URL }}',
+            supabaseKey: '${{ secrets.SUPABASE_KEY }}'
+          };
+          EOF
             
       - name: Build Project
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
