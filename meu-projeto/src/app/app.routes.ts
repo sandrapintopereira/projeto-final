@@ -8,7 +8,8 @@ import { About } from './about/about';
 import { Login } from './login/login';
 
 export const routes: Routes = [
-    {path: '', component: Dashboard},
+    {path: '', component: Login},
+    {path: 'dashboard', component: Dashboard},
     {path: 'lista', component: ListaMedia},
     {path: 'lista/new', component: FormularioMedia},
     {path: 'detalhe/:id', component: DetalhesMedia},
