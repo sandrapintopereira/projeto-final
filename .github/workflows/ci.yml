@@ -6,6 +6,10 @@ on:
       - feature/ci-pipeline
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: meu-projeto
+
 jobs:
   build-and-lint:
     runs-on: ubuntu-latest
