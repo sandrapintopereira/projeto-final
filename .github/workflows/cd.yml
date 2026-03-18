@@ -44,7 +44,8 @@ jobs:
           EOF
             
       - name: Build Project
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        working-directory: meu-projeto
+        run: npx ng build --configuration production
 
       - name: Move build output
         run: |
