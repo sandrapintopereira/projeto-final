@@ -11,41 +11,41 @@ import { Supabase } from '../services/supabase';
 })
 export class Login {
   private router = inject(Router);
-  private supabaseService = inject(Supabase)
+  private supabaseService = inject(Supabase);
 
-  username = '';
+  loginUsername = '';
+  loginPassword = '';
+
+  registerUsername = '';
+  registerPassword = '';
+
   erro = '';
-  password = '';
 
   async login() {
     this.erro = '';
-
-    const user = await this.supabaseService.login(this.username, this.password);
-
-        if (user) {
-          this.router.navigate(['/lista']);
-        } else {
-          this.erro = 'Utilizador inválido ou palavra-passe incorreta.';
-        }
+    const user = await this.supabaseService.login(this.loginUsername, this.loginPassword);
+    if (user) {
+      this.router.navigate(['/lista']);
+    } else {
+      this.erro = 'Utilizador inválido ou palavra-passe incorreta.';
+    }
   }
 
   async registar() {
     this.erro = '';
 
-    const userNovo = this.username.trim();
-    const passwordNova = this.password.trim();
+    const userNovo = this.registerUsername.trim();
+    const passwordNova = this.registerPassword.trim();
 
-    if(!userNovo || !passwordNova) {
+    if (!userNovo || !passwordNova) {
       this.erro = 'Preencha username e password.';
       return;
     }
 
     const created = await this.supabaseService.createUser(userNovo, passwordNova);
-
-    if(!created) {
+    if (!created) {
       this.erro = 'Erro ao criar utilizador.';
       return;
     }
   }
 }
-  
