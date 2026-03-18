@@ -32,6 +32,15 @@ jobs:
       - name: Pull Vercel Environment
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
+      - name: Generate environment.ts
+        run: |
+          mkdir -p meu-projeto/src/environments
+          cat > meu-projeto/src/environments/environment.ts <<EOF
+          export const environment = {
+            production: true
+          };
+          EOF
+          
       - name: Build Project
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
