@@ -50,6 +50,6 @@ export class Login {
 
     this.registerUsername = '';
     this.registerPassword = '';
-  };
+  }
 }
 
