@@ -1,5 +1,7 @@
 # Frame Marcado — Watchlist de Filmes & Séries
 
+[![CI](https://github.com/sandrapintopereira/projeto-final/actions/workflows/ci.yml/badge.svg)](https://github.com/sandrapintopereira/projeto-final/actions/workflows/ci.yml)
+
 Projeto final desenvolvido para o módulo de Programação em JavaScript.
 
 ## Descrição
@@ -28,3 +30,4 @@ No terminal:
 
 Abre o browser em `http://localhost:4200`
 test
+
