@@ -51,7 +51,5 @@ export class Login {
     this.registerUsername = '';
     this.registerPassword = '';
   }
-
-  let abc = 123;
 }
 
